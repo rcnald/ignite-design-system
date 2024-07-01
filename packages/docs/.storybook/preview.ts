@@ -6,7 +6,7 @@ import { themes } from '@storybook/theming';
 const preview: Preview = {
   parameters: {
     docs:{
-      theme: themes.dark
+      theme: themes.dark,
     },
     controls: {
       matchers: {
