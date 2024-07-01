@@ -1,4 +1,4 @@
-import '../../react/dist/globals.css';
+import '@ignite-ui/react/dist/globals.css';
 import type { Preview } from "@storybook/react";
 
 import { themes } from '@storybook/theming';
