@@ -2,19 +2,20 @@ import { fontSizes } from '@ignite-ui-rcnald/tokens'
 import { ComponentProps, ElementType } from 'react'
 import { tv } from 'tailwind-variants'
 
-export type FontSizesKeys = keyof typeof fontSizes
+function createSizeVariants<T extends Record<string, string>>(sizes: T) {
+  return Object.keys(sizes).reduce(
+    (sizesAccumulator, key) => {
+      const typedKey = key as keyof T
 
-const sizes = Object.entries(fontSizes).reduce(
-  (sizesAccumulator, [key]) => {
-    sizesAccumulator = {
-      ...sizesAccumulator,
-      [key as FontSizesKeys]: `text-${key}`,
-    }
+      sizesAccumulator[typedKey] =
+        `text-${key}` as `text-${Extract<typeof typedKey, string>}`
+      return sizesAccumulator
+    },
+    {} as { [K in keyof T]: `text-${Extract<K, string>}` },
+  )
+}
 
-    return sizesAccumulator
-  },
-  {} as Record<FontSizesKeys, string>,
-)
+const sizes = createSizeVariants(fontSizes)
 
 export const textVariants = tv({
   base: 'font-default leading-base m-0 text-gray100',

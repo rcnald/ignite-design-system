@@ -13,7 +13,7 @@ export const headingVariants = tv({
       '4xl': 'text-7xl',
       '5xl': 'text-8xl',
       '6xl': 'text-9xl',
-    },
+    } as const,
   },
   defaultVariants: {
     size: 'md',
