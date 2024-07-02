@@ -1,5 +1,6 @@
 {
-  "name": "@ignite-ui/eslint-config",
+  "name": "@ignite-ui-rcnald/eslint-config",
+  "version": "2.0.0",
   "private": true,
   "license": "MIT",
   "main": "index.js",

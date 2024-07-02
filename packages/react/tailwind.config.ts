@@ -6,7 +6,7 @@ import {
   lineHeights,
   radii,
   space,
-} from '@ignite-ui/tokens'
+} from '@ignite-ui-rcnald/tokens'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {

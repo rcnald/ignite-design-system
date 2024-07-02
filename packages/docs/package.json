@@ -1,5 +1,5 @@
 {
-  "name": "@ignite-ui/docs",
+  "name": "@ignite-ui-rcnald/docs",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -16,9 +16,9 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
-    "@ignite-ui/eslint-config": "*",
-    "@ignite-ui/ts-config": "*",
-    "@ignite-ui/react": "*",
+    "@ignite-ui-rcnald/eslint-config": "*",
+    "@ignite-ui-rcnald/ts-config": "*",
+    "@ignite-ui-rcnald/react": "*",
     "@storybook/addon-docs": "^8.1.11",
     "@storybook/addon-essentials": "^8.1.11",
     "@storybook/addon-interactions": "^8.1.11",

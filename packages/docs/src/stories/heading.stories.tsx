@@ -1,4 +1,9 @@
-import { Box, Heading, HeadingProps, headingVariants } from '@ignite-ui/react'
+import {
+  Box,
+  Heading,
+  HeadingProps,
+  headingVariants,
+} from '@ignite-ui-rcnald/react'
 import type { Meta, StoryObj } from '@storybook/react'
 
 export default {

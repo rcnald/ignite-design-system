@@ -1,4 +1,4 @@
-import { fontSizes } from '@ignite-ui/tokens'
+import { fontSizes } from '@ignite-ui-rcnald/tokens'
 import { ComponentProps, ElementType } from 'react'
 import { tv } from 'tailwind-variants'
 
