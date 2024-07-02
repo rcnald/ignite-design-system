@@ -2,7 +2,7 @@
   "name": "@ignite-ui/react",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./dist/",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
