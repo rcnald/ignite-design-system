@@ -1,5 +1,11 @@
 # @ignite-ui-rcnald/react
 
+## 3.0.0
+
+### Major Changes
+
+- add core components to design system
+
 ## 2.0.0
 
 ### Major Changes

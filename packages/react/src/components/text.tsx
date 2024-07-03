@@ -1,27 +1,39 @@
-import { fontSizes } from '@ignite-ui-rcnald/tokens'
+// import { fontSizes } from '@ignite-ui-rcnald/tokens'
 import { ComponentProps, ElementType } from 'react'
 import { tv } from 'tailwind-variants'
 
-function createSizeVariants<T extends Record<string, string>>(sizes: T) {
-  return Object.keys(sizes).reduce(
-    (sizesAccumulator, key) => {
-      const typedKey = key as keyof T
+// function createSizeVariants<T extends Record<string, string>>(sizes: T) {
+//   return Object.keys(sizes).reduce(
+//     (sizesAccumulator, key) => {
+//       const typedKey = key as keyof T
 
-      sizesAccumulator[typedKey] =
-        `text-${key}` as `text-${Extract<typeof typedKey, string>}`
-      return sizesAccumulator
-    },
-    {} as { [K in keyof T]: `text-${Extract<K, string>}` },
-  )
-}
+//       sizesAccumulator[typedKey] =
+//         `text-${key}` as `text-${Extract<typeof typedKey, string>}`
+//       return sizesAccumulator
+//     },
+//     {} as { [K in keyof T]: `text-${Extract<K, string>}` },
+//   )
+// }
 
-const sizes = createSizeVariants(fontSizes)
+// const sizes = createSizeVariants(fontSizes)
 
 export const textVariants = tv({
-  base: 'font-default leading-base m-0 text-gray100',
+  base: 'font-default leading-base text-gray100 m-0',
   variants: {
     size: {
-      ...sizes,
+      xxs: 'text-xxs',
+      xs: 'text-xs',
+      sm: 'text-sm',
+      md: 'text-md',
+      lg: 'text-lg',
+      xl: 'text-xl',
+      '2xl': 'text-2xl',
+      '4xl': 'text-4xl',
+      '5xl': 'text-5xl',
+      '6xl': 'text-6xl',
+      '7xl': 'text-7xl',
+      '8xl': 'text-8xl',
+      '9xl': 'text-9xl',
     },
   },
   defaultVariants: {
@@ -36,14 +48,14 @@ export interface TextProps extends ComponentProps<'p'> {
 
 export function Text({
   children,
-  size,
+  size = 'md',
   as: customElement,
   ...props
 }: TextProps) {
   const Element = customElement || 'p'
 
   return (
-    <Element className={textVariants({ size })} {...props}>
+    <Element {...props} className={textVariants({ size })}>
       {children}
     </Element>
   )

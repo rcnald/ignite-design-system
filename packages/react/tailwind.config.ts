@@ -12,18 +12,20 @@ import type { Config } from 'tailwindcss'
 const config: Config = {
   content: ['./src/**/*.{html,ts*}'],
   theme: {
-    colors: { ...colors },
     borderRadius: { ...radii },
     fontSize: { ...fontSizes },
     fontWeight: { ...fontWeights },
     padding: { ...space },
     margin: { ...space },
-    width: { ...space },
-    height: { ...space },
     lineHeight: { ...lineHeights },
     fontFamily: { ...fonts },
+    extend: {
+      colors: { ...colors },
+      width: { ...space },
+      height: { ...space },
+    },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 }
 
 export default config

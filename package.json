@@ -9,7 +9,7 @@
     "build": "turbo run build",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=!docs && changeset publish"
+    "release": "turbo run build --filter=!@ignite-ui-rcnald/docs && changeset publish"
   },
   "packageManager": "npm@10.8.1",
   "devDependencies": {
