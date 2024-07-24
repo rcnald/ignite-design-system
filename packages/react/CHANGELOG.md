@@ -1,5 +1,17 @@
 # @ignite-ui-rcnald/react
 
+## 4.1.0
+
+### Minor Changes
+
+- now Input component supports ref prop
+
+## 4.0.0
+
+### Major Changes
+
+- 6c0130e: Components now support individually styling
+
 ## 3.1.0
 
 ### Minor Changes
