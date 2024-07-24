@@ -1,5 +1,11 @@
 # @ignite-ui-rcnald/react
 
+## 4.0.0
+
+### Major Changes
+
+- 6c0130e: Components now support individually styling
+
 ## 3.1.0
 
 ### Minor Changes
