@@ -15,11 +15,11 @@ const config: Config = {
     borderRadius: { ...radii },
     fontSize: { ...fontSizes },
     fontWeight: { ...fontWeights },
-    padding: { ...space },
-    margin: { ...space },
     lineHeight: { ...lineHeights },
     fontFamily: { ...fonts },
     extend: {
+      padding: { ...space },
+      margin: { ...space },
       colors: { ...colors },
       width: { ...space },
       height: { ...space },
