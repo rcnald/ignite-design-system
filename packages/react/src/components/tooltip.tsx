@@ -1,6 +1,8 @@
 import * as TooltipComponent from '@radix-ui/react-tooltip'
 import { ComponentProps } from 'react'
 
+import { cn } from '../lib/utils'
+
 export interface TooltipProps
   extends ComponentProps<typeof TooltipComponent.Root> {}
 
@@ -24,11 +26,18 @@ export function TooltipTrigger({ children, ...props }: TooltipTriggerProps) {
 export interface TooltipContentProps
   extends ComponentProps<typeof TooltipComponent.Content> {}
 
-export function TooltipContent({ children, ...props }: TooltipContentProps) {
+export function TooltipContent({
+  className,
+  children,
+  ...props
+}: TooltipContentProps) {
   return (
     <TooltipComponent.Portal>
       <TooltipComponent.Content
-        className="bg-gray900 px-4 py-3 rounded-sm font-default text-sm text-white font-medium data-[state='delayed-open']:animate-in data-[state='delayed-open']:fade-in-5 data-[state='delayed-open']:duration-150 data-[state='delayed-open']:data-[side='top']:slide-in-from-top-2 data-[state='delayed-open']:data-[side='bottom']:slide-in-from-bottom-2 data-[state='delayed-open']:data-[side='left']:slide-in-from-left-2 data-[state='delayed-open']:data-[side='right']:slide-in-from-right-2 data-[state='closed']:animate-out data-[state='closed']:fade-out"
+        className={cn(
+          "bg-gray900 px-4 py-3 rounded-sm font-default text-sm text-white font-medium data-[state='delayed-open']:animate-in data-[state='delayed-open']:fade-in-5 data-[state='delayed-open']:duration-150 data-[state='delayed-open']:data-[side='top']:slide-in-from-top-2 data-[state='delayed-open']:data-[side='bottom']:slide-in-from-bottom-2 data-[state='delayed-open']:data-[side='left']:slide-in-from-left-2 data-[state='delayed-open']:data-[side='right']:slide-in-from-right-2 data-[state='closed']:animate-out data-[state='closed']:fade-out",
+          className,
+        )}
         {...props}
       >
         {children}

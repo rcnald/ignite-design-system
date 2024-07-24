@@ -1,12 +1,19 @@
 import { ComponentProps } from 'react'
 
+import { cn } from '../lib/utils'
+
 export interface InputProps extends ComponentProps<'input'> {
   prefix?: string
 }
 
-export function Input({ prefix, ...props }: InputProps) {
+export function Input({ className, prefix, ...props }: InputProps) {
   return (
-    <label className="px-4 py-3 rounded-sm has-[input[disabled]]:select-none bg-gray900 focus-within:outline text-white font-default focus-within:outline-ignite300">
+    <label
+      className={cn(
+        'px-4 py-3 rounded-sm has-[input[disabled]]:select-none bg-gray900 focus-within:outline text-white font-default focus-within:outline-ignite300',
+        className,
+      )}
+    >
       {prefix ? <span className="text-gray-400">{prefix}</span> : null}
       <input
         type="text"

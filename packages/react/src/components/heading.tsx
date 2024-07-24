@@ -1,6 +1,8 @@
 import { ComponentProps, ElementType } from 'react'
 import { tv } from 'tailwind-variants'
 
+import { cn } from '../lib/utils'
+
 export const headingVariants = tv({
   base: 'font-default leading-shorter m-0 text-gray100',
   variants: {
@@ -26,6 +28,7 @@ export interface HeadingProps extends ComponentProps<'p'> {
 }
 
 export function Heading({
+  className,
   children,
   size,
   as: customElement,
@@ -34,7 +37,7 @@ export function Heading({
   const Element = customElement || 'h2'
 
   return (
-    <Element className={headingVariants({ size })} {...props}>
+    <Element className={cn(headingVariants({ size }), className)} {...props}>
       {children}
     </Element>
   )

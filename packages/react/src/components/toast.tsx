@@ -9,6 +9,8 @@ import {
   useState,
 } from 'react'
 
+import { cn } from '../lib/utils'
+
 export interface toastContextType {
   open: boolean
   setOpen: (state: boolean) => void
@@ -71,6 +73,7 @@ export interface ToastContentProps
 }
 
 export function ToastContent({
+  className,
   title,
   description,
   children,
@@ -80,7 +83,10 @@ export function ToastContent({
 
   return (
     <ToastComponent.Root
-      className="bg-gray800 min-w-[360px] relative flex-col flex rounded-sm px-5 py-3 font-default border-gray600 border border-solid data-[state='open']:animate-in data-[state='open']:slide-in-from-right data-[state='closed']:animate-out data-[state='closed']:fade-out"
+      className={cn(
+        "bg-gray800 min-w-[360px] relative flex-col flex rounded-sm px-5 py-3 font-default border-gray600 border border-solid data-[state='open']:animate-in data-[state='open']:slide-in-from-right data-[state='closed']:animate-out data-[state='closed']:fade-out",
+        className,
+      )}
       open={open}
       onOpenChange={setOpen}
       {...props}

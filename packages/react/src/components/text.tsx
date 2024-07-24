@@ -2,6 +2,8 @@
 import { ComponentProps, ElementType } from 'react'
 import { tv } from 'tailwind-variants'
 
+import { cn } from '../lib/utils'
+
 // function createSizeVariants<T extends Record<string, string>>(sizes: T) {
 //   return Object.keys(sizes).reduce(
 //     (sizesAccumulator, key) => {
@@ -47,6 +49,7 @@ export interface TextProps extends ComponentProps<'p'> {
 }
 
 export function Text({
+  className,
   children,
   size = 'md',
   as: customElement,
@@ -55,7 +58,7 @@ export function Text({
   const Element = customElement || 'p'
 
   return (
-    <Element {...props} className={textVariants({ size })}>
+    <Element {...props} className={cn(textVariants({ size }), className)}>
       {children}
     </Element>
   )

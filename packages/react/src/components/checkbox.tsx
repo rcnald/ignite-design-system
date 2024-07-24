@@ -2,12 +2,17 @@ import * as Check from '@radix-ui/react-checkbox'
 import { Check as CheckIcon } from 'lucide-react'
 import { ComponentProps } from 'react'
 
+import { cn } from '../lib/utils'
+
 export interface CheckboxProps extends ComponentProps<typeof Check.Root> {}
 
-export function Checkbox({ checked, ...props }: CheckboxProps) {
+export function Checkbox({ className, checked, ...props }: CheckboxProps) {
   return (
     <Check.Root
-      className="group size-6 focus:ring-1 focus:ring-ignite300 focus:ring-inset hover:ring-1 hover:ring-ignite300 hover:ring-inset overflow-hidden bg-gray900 rounded-xs aspect-square"
+      className={cn(
+        'group size-6 focus:ring-1 focus:ring-ignite300 focus:ring-inset hover:ring-1 hover:ring-ignite300 hover:ring-inset overflow-hidden bg-gray900 rounded-xs aspect-square',
+        className,
+      )}
       checked={checked}
       {...props}
     >
