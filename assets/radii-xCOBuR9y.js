@@ -1,0 +1,4 @@
+import{j as t}from"./index-B90hnm7z.js";import{useMDXComponents as n}from"./index-DbIxU3Ed.js";import{M as s}from"./chunk-HLWAVYOI-DK_-mchk.js";import{T as e}from"./tokens-grid-CaIoktUv.js";import{r as m}from"./index-DUAmunwE.js";import"./index-l2PZgWEW.js";import"./index-CaNG7YX3.js";import"./iframe-Dp40EMSU.js";import"../sb-preview/runtime.js";import"./react-18-B2S7X9kl.js";import"./index-Bi6hQEPF.js";import"./index-DXimoRZY.js";import"./index-B5xYo-Cg.js";import"./index-DrFu-skq.js";function r(o){const i={h1:"h1",p:"p",...n(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(s,{title:"Tokens/Radii"}),`
+`,t.jsx(i.h1,{id:"radii",children:"Radii"}),`
+`,t.jsx(i.p,{children:"Essas são os radii utilizados no Ignite UI."}),`
+`,t.jsx(e,{tokens:m})]})}function R(o={}){const{wrapper:i}={...n(),...o.components};return i?t.jsx(i,{...o,children:t.jsx(r,{...o})}):r(o)}export{R as default};

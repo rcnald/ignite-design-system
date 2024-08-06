@@ -1,0 +1,5 @@
+import{j as e}from"./index-B90hnm7z.js";import{a as n,B as p,T as x}from"./index-DDMj9CZa.js";import"./index-l2PZgWEW.js";import"./index-CaNG7YX3.js";const h={title:"Form/Textarea",component:n,tags:["autodocs"],decorators:(l,{args:m})=>e.jsx(p,{children:e.jsxs("label",{htmlFor:"textarea",style:{display:"flex",flexDirection:"column",gap:"12px",width:"100%"},children:[e.jsx(x,{children:"Observações"}),e.jsx(l,{args:{id:"textarea",...m}})]})}),args:{placeholder:"adicione suas observações...",disabled:!1}},r={},a={args:{disabled:!0}};var s,t,o;r.parameters={...r.parameters,docs:{...(s=r.parameters)==null?void 0:s.docs,source:{originalSource:"{}",...(o=(t=r.parameters)==null?void 0:t.docs)==null?void 0:o.source}}};var i,d,c;a.parameters={...a.parameters,docs:{...(i=a.parameters)==null?void 0:i.docs,source:{originalSource:`{
+  args: {
+    disabled: true
+  }
+}`,...(c=(d=a.parameters)==null?void 0:d.docs)==null?void 0:c.source}}};const j=["Primary","Disabled"];export{a as Disabled,r as Primary,j as __namedExportsOrder,h as default};
