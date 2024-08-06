@@ -1,5 +1,11 @@
 # @ignite-ui-rcnald/react
 
+## 4.2.0
+
+### Minor Changes
+
+- export Input component
+
 ## 4.1.0
 
 ### Minor Changes
